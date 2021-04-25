@@ -4,14 +4,14 @@ var cors = require('cors');
 const createCadastro = require("./db/query");
 const app = express();
 
-const saveRouter = require("./routes/save");
+const cadastro = require("./routes/cadastro");
 
 
 app.use(cors());
 app.options('*', cors());
 app.use(express.json());
 
-app.use('/save-data', saveRouter);
+app.use('/cadastro', cadastro);
 
 app.listen(process.env.PORT || 3000, function () {
     var db = new sqlite.Database('simbiose.S3DB', (err) => {
