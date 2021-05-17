@@ -1,12 +1,10 @@
 const express = require('express');
 const routes = express.Router();
 const http = require('http');
-const controller = require('../controller/cadastro');
+const controller = require('../controller/imagens');
 
 routes.post('/save-data', controller.save);
 routes.get('/get-data', controller.get);
-routes.post('/filter-data/:filtro', controller.getWhere);
-routes.put('/update-data', controller.update);
 routes.delete('/delete-data/:id', controller.delete);
 
 

@@ -42,6 +42,7 @@ exports.getWhere = async (req, res, next) => {
 }
 
 exports.update = async (req, res, next) => {
+    console.log(req.body);
     db.run(query.update,
         req.body.categoria
         , req.body.especialidade
@@ -50,11 +51,11 @@ exports.update = async (req, res, next) => {
         , req.body.simbiose
         , req.body.atestado
         , req.body.bompastor
-        , req.body.hora
-        , req.params.id
+        , req.body.dataHora
+        , req.body.id
         , (err) => {
             if (err) { res.status(400).json({ msg: "Não foi possível atualizar", status: 400, erro: err }); console.log(err); }
-            else { res.status(200).json({ msg: "Atualizado com sucesso!", status: 200 }); }
+            else { console.log(this.changes); res.status(200).json({ msg: "Atualizado com sucesso!", status: 200 }); }
         });
 }
 
