@@ -18,7 +18,7 @@ exports.save = async (req, res, next) => {
         , req.body.medico
         , req.body.preco
         , (err) => {
-            if (err) { res.status(400).json({ msg: "Não foi possível mover para arquivos", status: 400, erro: err }); console.log(err); }
+            if (err) { res.status(400).json({ msg: "Não foi possível mover para arquivos", status: 400, erro: err }); }
             else { res.status(200).json({ msg: "Movido para arquivos", status: 200 }); }
         });
 }
@@ -28,7 +28,6 @@ exports.get = async (req, res, next) => {
     db.all(query.select, params, (err, rows) => {
         if (err) { res.status(400).json({ msg: "Não foi possível buscar arquivos", status: 400 }) }
         else {
-            console.log(rows);
             res.status(200).json(rows);
         }
     });

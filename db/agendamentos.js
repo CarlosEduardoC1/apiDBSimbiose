@@ -7,3 +7,4 @@ exports.where = `SELECT * FROM agendamentos where categoria = ? limit 10`;
 
 exports.delete = `DELETE FROM agendamentos WHERE id = ?`;
 
+exports.myAgenda = `SELECT * FROM agendamentos WHERE cpf = ?`;

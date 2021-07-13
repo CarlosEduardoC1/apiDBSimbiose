@@ -9,3 +9,7 @@ exports.createTableArquivo = `CREATE TABLE IF NOT EXISTS 'arquivo' ('id' INTEGER
 exports.createTableAgendamentos = `CREATE TABLE IF NOT EXISTS 'agendamentos' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL
 , 'cpf' TEXT NOT NULL, 'email' TEXT NOT NULL, 'endereco' TEXT NOT NULL, 'fone' TEXT NOT NULL, 'name' TEXT NOT NULL, 'dia' TEXT NOT NULL
 , 'especialidade' TEXT NOT NULL, 'hora' TEXT NOT NULL, 'categoria' TEXT NOT NULL, 'medico' TEXT NOT NULL, 'preco' TEXT NOT NULL)`;
+
+exports.createTableUsers = `CREATE TABLE IF NOT EXISTS 'users' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL
+, 'cpf' TEXT NOT NULL, 'email' TEXT NOT NULL, 'endereco' TEXT NOT NULL, 'fone' TEXT NOT NULL, 'name' TEXT NOT NULL, 'nomeMae' TEXT NOT NULL
+, 'rg' TEXT NOT NULL, 'password' TEXT NOT NULL)`;

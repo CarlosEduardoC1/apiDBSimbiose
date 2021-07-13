@@ -13,7 +13,6 @@ exports.save = async (req, res, next) => {
             res.status(200).json({ msg: "Imagem cadastrada com sucesso", status: 200 });
         }
         catch (error) {
-            console.log(error);
             res.status(400).json({ msg: "Erro ao cadastrar imagem", status: 400 });
 
         }
@@ -26,7 +25,6 @@ exports.save = async (req, res, next) => {
                 res.status(200).json({ msg: "Imagem cadastrada com sucesso", status: 200 });
             }
             catch (error) {
-                console.log(error);
                 res.status(400).json({ msg: "Erro ao cadastrar imagem", status: 400 });
 
             }
@@ -39,7 +37,6 @@ exports.save = async (req, res, next) => {
                     res.status(200).json({ msg: "Imagem cadastrada com sucesso", status: 200 });
                 }
                 catch (error) {
-                    console.log(error);
                     res.status(400).json({ msg: "Erro ao cadastrar imagem", status: 400 });
 
                 }
@@ -68,7 +65,6 @@ exports.delete = async (req, res, next) => {
             res.status(200).json({ msg: "Imagem deletada com sucesso", status: 200 });
         }
         catch (error) {
-            console.log(error);
             res.status(400).json({ msg: "Erro ao deletar imagem", status: 400 });
 
         }
@@ -81,7 +77,6 @@ exports.delete = async (req, res, next) => {
                 res.status(200).json({ msg: "Imagem deletada com sucesso", status: 200 });
             }
             catch (error) {
-                console.log(error);
                 res.status(400).json({ msg: "Erro ao deletar imagem", status: 400 });
 
             }
@@ -93,7 +88,6 @@ exports.delete = async (req, res, next) => {
                 res.status(200).json({ msg: "Imagem deletada com sucesso", status: 200 });
             }
             catch (error) {
-                console.log(error);
                 res.status(400).json({ msg: "Erro ao deletar imagem", status: 400 });
 
             }
