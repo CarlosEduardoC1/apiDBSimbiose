@@ -4,7 +4,7 @@ var db = new sqlite.Database('simbiose.S3DB');
 const query = require('../db/agendamentos');
 
 
-exports.save = async (req, res, next) => {
+exports.save = async (req, res, next) => { 
     db.run(query.insert,
         req.body.cpf
         , req.body.email

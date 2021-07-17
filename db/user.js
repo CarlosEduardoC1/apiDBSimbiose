@@ -9,4 +9,4 @@ exports.verify = `Select count(*) AS possui from users where email = ?`;
 
 exports.selectID = `SELECT id FROM users WHERE cpf = ?`;
 
-exports.find = `SELECT email, password, cpf FROM users WHERE email = ?`;
+exports.find = `SELECT email, password, cpf, endereco, fone, name FROM users WHERE email = ?`;

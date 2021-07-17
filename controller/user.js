@@ -50,7 +50,7 @@ exports.auth = async (req, res, next) => {
         if (err) { res.status(400).json({ msg: "Não foi possível autenticar", status: 400, erro: err });  }
         else if (row) {
             if (req.body.password === row.password) {
-                { res.status(200).json({ status: 200, cpf: row.cpf }); }
+                { res.status(200).json({ status: 200, cpf: row.cpf, name: row.name, fone: row.fone, endereco: row.endereco }); }
             }
             else { res.status(400).json({ msg: "erro" }); }
 
