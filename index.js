@@ -22,7 +22,7 @@ app.use('/users', users);
 app.use('/images', imagens);
 
 
-app.listen(process.env.PORT || 3080, function () {
+app.listen(process.env.PORT || 3090, function () {
     var db = new sqlite.Database('simbiose.S3DB', (err) => {
         if (err) console.log(err);
         else {
